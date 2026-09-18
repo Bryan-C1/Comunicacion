@@ -67,7 +67,7 @@ const evidencias: Record<string, { id: string; title: string; subtitle: string; 
     {
       id: '02',
       title: 'Evidencia 2',
-      subtitle: 'Funciones del Lenguaje — Referencial',
+      subtitle: 'Funciones del Lenguaje — Fática',
       color: 'from-sky-700 to-blue-700',
       file: '/evidencias/camilo-vargas/evidencia_2c.pdf',
     },
