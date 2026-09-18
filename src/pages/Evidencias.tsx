@@ -4,7 +4,9 @@ import { Link } from 'react-router';
 const members = ['Brayan Córdoba', 'Valentina Molina', 'Camilo Vargas'];
 
 function getEvidenceUrl(file?: string) {
-  return file ? `${import.meta.env.BASE_URL}${file.replace(/^\/+/, '')}` : undefined;
+  return file
+    ? `https://media.githubusercontent.com/media/Bryan-C1/Comunicacion/main${file}`
+    : undefined;
 }
 
 const evidencias: Record<string, { id: string; title: string; subtitle: string; color: string; file?: string }[]> = {
