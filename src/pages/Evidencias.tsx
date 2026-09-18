@@ -3,6 +3,10 @@ import { Link } from 'react-router';
 
 const members = ['Brayan Córdoba', 'Valentina Molina', 'Camilo Vargas'];
 
+function getEvidenceUrl(file?: string) {
+  return file ? `${import.meta.env.BASE_URL}${file.replace(/^\/+/, '')}` : undefined;
+}
+
 const evidencias: Record<string, { id: string; title: string; subtitle: string; color: string; file?: string }[]> = {
   'Brayan Córdoba': [
     {
@@ -156,7 +160,7 @@ export default function Evidencias() {
                 <p className="text-white/40 text-xs mb-4">{ev.subtitle}</p>
                 {ev.file ? (
                   <a
-                    href={ev.file}
+                    href={getEvidenceUrl(ev.file)}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-block text-xs px-4 py-1.5 rounded-full border border-purple-500/30 text-purple-400 hover:bg-purple-500/10 transition-all"
@@ -198,7 +202,7 @@ export default function Evidencias() {
                   {evidencias[member].map((ev) => (
                     <a
                       key={ev.id}
-                      href={ev.file || undefined}
+                      href={getEvidenceUrl(ev.file)}
                       target={ev.file ? '_blank' : undefined}
                       rel={ev.file ? 'noreferrer' : undefined}
                       className="flex items-center gap-3 rounded-xl bg-[#16162a] border border-white/5 p-3"
