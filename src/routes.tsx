@@ -18,19 +18,22 @@ function Root() {
   );
 }
 
-export const router = createBrowserRouter([
-  {
-    path: '/',
-    Component: Root,
-    children: [
-      { index: true, Component: Inicio },
-      { path: 'comunicacion', Component: Comunicacion },
-      { path: 'temas', Component: Temas },
-      { path: 'temas/:topicId', Component: TemaDetalle },
-      { path: 'reto', Component: Reto },
-      { path: 'equipo', Component: Equipo },
-      { path: 'evidencias', Component: Evidencias },
-      { path: 'reflexiones', Component: Reflexiones },
-    ],
-  },
-]);
+export const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      Component: Root,
+      children: [
+        { index: true, Component: Inicio },
+        { path: 'comunicacion', Component: Comunicacion },
+        { path: 'temas', Component: Temas },
+        { path: 'temas/:topicId', Component: TemaDetalle },
+        { path: 'reto', Component: Reto },
+        { path: 'equipo', Component: Equipo },
+        { path: 'evidencias', Component: Evidencias },
+        { path: 'reflexiones', Component: Reflexiones },
+      ],
+    },
+  ],
+  { basename: import.meta.env.BASE_URL },
+);
