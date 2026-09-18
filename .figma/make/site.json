@@ -1,0 +1,10 @@
+{
+  "description": "Offers multiple themed views with intuitive layouts based on contextual requirements to enhance user navigation and content organization.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
