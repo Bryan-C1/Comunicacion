@@ -5,7 +5,7 @@ const members = ['Brayan Córdoba', 'Valentina Molina', 'Camilo Vargas'];
 
 function getEvidenceUrl(file?: string) {
   return file
-    ? `https://media.githubusercontent.com/media/Bryan-C1/Comunicacion/main${file}`
+    ? `https://github.com/Bryan-C1/Comunicacion/blob/main${file}`
     : undefined;
 }
 
